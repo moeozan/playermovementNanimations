@@ -688,6 +688,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword Man
       objectReference: {fileID: 0}
+    - target: {fileID: 7247471406923299330, guid: c5ba50407ab15034a8ff0302505a2cc9,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247471406923299330, guid: c5ba50407ab15034a8ff0302505a2cc9,
+        type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247471406923299330, guid: c5ba50407ab15034a8ff0302505a2cc9,
+        type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5ba50407ab15034a8ff0302505a2cc9, type: 3}
 --- !u!1 &1231032908

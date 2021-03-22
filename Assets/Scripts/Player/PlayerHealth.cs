@@ -4,10 +4,7 @@ using UnityEngine.UI;
 
 
 public class PlayerHealth : MonoBehaviour
-{
-
-    
-    
+{ 
     public float CurrentHealth { get { return currentHealth; } private set { } }
     [SerializeField]private float maxHealth;
     public float MaxHealth { get { return maxHealth; } private set { } }

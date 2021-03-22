@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private float gravityValue = -9.81f;
     private Camera cam;
     private Animator anim;
+    [HideInInspector] public bool movementFinish;
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -44,20 +45,22 @@ public class PlayerMovement : MonoBehaviour
             playerVelocity.y = 0f;
         }
 
-        controller.Move(moveInput * Time.deltaTime * playerSpeed);
-
-        if (moveInput != Vector3.zero)
+        if (moveInput != Vector3.zero && !anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
+            controller.Move(moveInput * Time.deltaTime * playerSpeed);
             gameObject.transform.forward = moveInput;
             anim.SetInteger("Speed", 1);
+            movementFinish = false;           
         }
         else
         {
             anim.SetInteger("Speed", 0);
+            movementFinish = true;
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             anim.SetInteger("Speed", 2);
+            movementFinish = false;
         }
         /*
         // Changes the height position of the player..
